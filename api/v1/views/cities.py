@@ -51,7 +51,7 @@ def create_city(state_id):
     if not city:
         abort(400, "Not a JSON")
     if 'name' not in city.keys():
-        abort(abort, "Missing name")
+        abort(400, "Missing name")
     new_city = City(**city)
     setattr(new_city, 'state_id', state_id)
     storage.new(new_city)
