@@ -19,7 +19,7 @@ def api_status():
     return jsonify(status)
 
 
-@app_views.route('stats')
+@app_views.route('/stats')
 def app_stats():
     """retrieving statistics of different objects"""
     stats = {}
