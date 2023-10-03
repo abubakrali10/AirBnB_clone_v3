@@ -46,7 +46,7 @@ def create_city(state_id):
     """creates a new city"""
     state = storage.get(State, state_id)
     if not state:
-        abort(400)
+        abort(404)
     city = request.get_json()
     if not city:
         abort(400, "Not a JSON")
