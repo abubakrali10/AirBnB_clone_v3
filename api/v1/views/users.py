@@ -48,7 +48,7 @@ def create_user():
     new_user = User(**user)
     storage.new(new_user)
     storage.save()
-    return jsonify(new_user.to_dict())
+    return jsonify(new_user.to_dict()), 201
 
 
 @app_views.route('users/<user_id>',
